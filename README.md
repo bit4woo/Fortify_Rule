@@ -1,20 +1,16 @@
 # Fortify_Rule
 
+### 导出Jar包的方法
+
 ![image-20201117141452569](img/README/image-20201117141452569.png)
 
 ![image-20201117142414977](img/README/image-20201117142414977.png)
 
 ![image-20201117141402411](img/README/image-20201117141402411.png)
 
+### Jar包下载
 
-
-
-
-
-
-
-
-
+https://github.com/bit4woo/Fortify_Rule/raw/master/FortifyRuleDecrypter.jar
 
 
 
@@ -59,8 +55,4 @@ C:\Users\CTF\Downloads\apk\Fortify SCA 20.1.1\bin>
 Xml File
 
 ![](img/xml.png)
-
-打包jar文件
-
-https://github.com/jas502n/Fortify_Rule/releases/download/1.0/Fortify_Rule.jar
 
