@@ -1,5 +1,8 @@
-import java.io.*;
-import static com.fortify.util.CryptoUtil.decryptCompressed;
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.FileOutputStream;
+import java.io.InputStream;
+import java.io.OutputStream;
 
 public class FortifyRuleDecrypter {
     private String ruleDir;
@@ -38,10 +41,21 @@ public class FortifyRuleDecrypter {
     public  void decryptRule(File encFile, File decFile){
         try {
             //调用decryptCompressed()对规则库进行解密
-            InputStream ruleStream = decryptCompressed(new FileInputStream(encFile), null);
+            InputStream ruleStream = com.fortify.util.CryptoUtil.decryptCompressed(new FileInputStream(encFile), null);
             OutputStream outputStream = new FileOutputStream(decFile);
+
             byte[] b = new byte[1024];
+            
             while ((ruleStream.read(b)) != -1) {
+            	String tmp = new String(b);
+            	if (tmp.contains("</RulePack>")){
+            		int index = tmp.indexOf("</RulePack>");
+            		int length = index+"</RulePack>".length();
+            		byte[] b1 = new byte[length];
+            		System.arraycopy(b, 0, b1, 0, length);
+            		outputStream.write(b1);
+            		break;
+            	}
                 outputStream.write(b);
             }
             ruleStream.close();

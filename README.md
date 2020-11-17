@@ -1,9 +1,32 @@
 # Fortify_Rule
 
-### Decode Fortify Rule Bin File Get XML File
-![](./rule.png)
+![image-20201117141452569](img/README/image-20201117141452569.png)
 
-java 代码地址： http://gv7.me/articles/2019/fortify-rule-library-decryption-process/
+![image-20201117142414977](img/README/image-20201117142414977.png)
+
+![image-20201117141402411](img/README/image-20201117141402411.png)
+
+
+
+
+
+
+
+
+
+
+
+
+
+### Decode Fortify Rule Bin File Get XML File
+
+![](img/rule.png)
+
+规则解密来自于文章：https://gv7.me/articles/2019/fortify-rule-library-decryption-process/
+
+/Fortify_Rule/com/fortify/util/CryptoUtil.java的代码由/Fortify_Rule/lib/fortify-crypto-1.0.jar反编译而来。原始路径"D:\Program Files\Fortify\Fortify_SCA_and_Apps_20.1.1\Core\lib\fortify-crypto-1.0.jar"
+
+
 
 Usage:
 
@@ -31,11 +54,11 @@ C:\Users\CTF\Downloads\apk\Fortify SCA 20.1.1\bin>java -jar Fortify_Rule.jar ./ 
 C:\Users\CTF\Downloads\apk\Fortify SCA 20.1.1\bin>
 ```
 
-![](./decode.png)
+![](img/decode.png)
 
 Xml File
 
-![](./xml.png)
+![](img/xml.png)
 
 打包jar文件
 
